@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>fixana</title>
+</head>
+<body style="margin:0;padding:0">
+
+<textarea id="input" style="width:100vw;height:40vh"></textarea><br>
+<button onclick="fix()" style="width:100vw;height:30px">Fix</button>
+<textarea id="output" style="width:100vw;height:40vh"></textarea>
+
+<script>
+var fix = function(){
+document.getElementById("output").value = "";
+    
+var str = document.getElementById("input").value;
+var n = str.charCodeAt(0);
+
+	for(var i=0;i<str.length;i++){
+		var n = str.charCodeAt(i);
+		console.log(n);
+		var s;
+		if(n > 63222 && n <= 63305)
+			s = String.fromCharCode(n-50870);
+		else if(n > 63305 && n <= 63391)
+			s = String.fromCharCode(n-50857);
+		else
+			s = String.fromCharCode(n);
+		document.getElementById("output").value += s;
+	}
+}
+</script>
+</body>
+</html>
