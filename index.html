@@ -19,7 +19,9 @@ var n = str.charCodeAt(0);
 		var n = str.charCodeAt(i);
 		console.log(n);
 		var s;
-		if(n > 63222 && n <= 63305)
+        if(n > 63217 && n <= 63222)
+			s = String.fromCharCode(n-50679);
+		else if(n > 63222 && n <= 63305)
 			s = String.fromCharCode(n-50870);
 		else if(n > 63305 && n <= 63391)
 			s = String.fromCharCode(n-50857);
